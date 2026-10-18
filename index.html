@@ -95,7 +95,7 @@ h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.4vw,84px);l
 .btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:600;font-size:14.5px;line-height:1;padding:13px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-color .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 24px -14px var(--accent)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.btn.coral{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.cv{background:var(--soft);border-color:var(--accent);color:var(--accent)}
 .btn svg{width:16px;height:16px;flex:none}
 .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-size:14px;color:var(--muted)}
 
@@ -157,6 +157,14 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);l
 .stat b{display:block;font-family:var(--display);font-weight:800;font-size:30px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums;direction:ltr;text-align:start}
 [dir="rtl"] .stat b{text-align:right}
 .stat span{font-size:12.5px;color:var(--muted);line-height:1.3;display:block;margin-top:4px}
+.mycommits{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mycommits a{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;border:1.5px dashed var(--accent);background:var(--soft);color:var(--ink);text-decoration:none;min-width:0;transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-style .2s}
+.mycommits a:hover{transform:translateY(-3px);border-style:solid}
+.mycommits svg{width:20px;height:20px;flex:none;color:var(--accent)}
+.mycommits b{font-family:var(--display);font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.mycommits span{font-size:13px;color:var(--muted);line-height:1.3;flex:1;min-width:0}
+.mycommits i{font-style:normal;color:var(--accent)}
+@media (max-width:560px){.mycommits{grid-template-columns:1fr}}
 .highlights{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
 .highlights li{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:12px;background:var(--bg);border:1.5px solid var(--line)}
 .highlights svg{width:16px;height:16px;color:var(--accent)}
@@ -317,9 +325,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="summary" data-i18n="summary">Backend developer specializing in <b>Laravel, RESTful APIs and relational databases</b>, with hands-on Flutter experience for mobile clients. Second-largest contributor to a 6-role university management platform, where I built the <b>real-time chat module</b>, hardened <b>API security</b> (IDOR, XSS, rate limiting) and delivered the <b>student module end to end</b>.</p>
         <div class="actions">
           <a class="btn primary" href="#projects" data-i18n="cta1">My projects ↓</a>
-          <a class="btn coral" href="Israa_Munawwar_CV.pdf" download><svg><use href="#i-dl"/></svg><span data-i18n="cta2">Download CV</span></a>
+          <a class="btn cv" href="Israa_Munawwar_CV.pdf" download><svg><use href="#i-dl"/></svg><span data-i18n="cta2">Download CV</span></a>
           <a class="btn" href="https://github.com/israamunawwar" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/israa-munawwar" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
+          <a class="btn" href="https://wa.me/963954652404" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn" href="https://t.me/+963954652404" target="_blank" rel="noopener"><svg><use href="#i-tg"/></svg>Telegram</a>
         </div>
         <div class="meta"><span data-i18n="loc">📍 Damascus, Syria</span><span data-i18n="langs">🗣 Arabic · English</span></div>
       </div>
@@ -381,8 +391,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div class="stats">
             <div class="stat"><b data-count="96" data-suffix="%">96%</b><span data-i18n="s0">project grade</span></div>
             <div class="stat"><b data-count="6">6</b><span data-i18n="s1">user roles</span></div>
-            <div class="stat"><b data-count="4">4</b><span data-i18n="s2">team members</span></div>
+            <div class="stat"><b data-count="5">5</b><span data-i18n="s2">team members</span></div>
             <div class="stat"><b data-count="9">9</b><span data-i18n="s3">focused controllers</span></div>
+          </div>
+          <div class="mycommits">
+            <a href="https://github.com/majdoulee2006/edu_bridge_backend/commits?author=esraamnower@gmail.com" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg><b>377</b><span data-i18n="cm1">my commits · Backend</span><i>↗</i></a>
+            <a href="https://github.com/majdoulee2006/Edu_Pridge_flutter/commits?author=esraamnower@gmail.com" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg><b>91</b><span data-i18n="cm2">my commits · Mobile App</span><i>↗</i></a>
           </div>
           <ul class="highlights">
             <li><svg><use href="#i-chat"/></svg><span data-i18n="h1x">Real-time chat</span></li>
@@ -497,7 +511,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
     </div>
     <ul class="contrib">
-      <li><span class="ico"><svg><use href="#i-users"/></svg></span><p data-i18n="b1">Web dashboard and Flutter app serving 6 user roles; built in a team of 4 as the second-largest contributor to both backend and mobile.</p></li>
+      <li><span class="ico"><svg><use href="#i-users"/></svg></span><p data-i18n="b1">Web dashboard and Flutter app serving 6 user roles; built in a team of 5 as the second-largest contributor to both backend and mobile.</p></li>
       <li><span class="ico c"><svg><use href="#i-chat"/></svg></span><p data-i18n="b2">Built one-to-one and group real-time chat for all roles on web and mobile using Pusher.</p></li>
       <li><span class="ico m"><svg><use href="#i-shield"/></svg></span><p data-i18n="b3">Secured the API by fixing IDOR and XSS vulnerabilities and adding rate limiting, background queues, database indexing and a single-active-session policy.</p></li>
       <li><span class="ico"><svg><use href="#i-user"/></svg></span><div><p data-i18n="b4">Delivered the student module end to end: Laravel APIs and Flutter screens for:</p><ul class="chips"><li data-i18n="m1">dashboard</li><li data-i18n="m2">attendance</li><li data-i18n="m3">schedule</li><li data-i18n="m4">assignments</li><li data-i18n="m5">notifications</li></ul></div></li>
@@ -540,9 +554,10 @@ const AR={
   bm:"Backend · تطبيق الموبايل",
   s0:"علامة المشروع",s1:"أدوار مستخدمين",s2:"أعضاء الفريق",s3:"controllers منفصلة",
   h1x:"دردشة فورية",h2x:"أمان الـ API",h3x:"وحدة الطالب",h4x:"إعادة هيكلة الكود",
+  cm1:"commit لي · Backend",cm2:"commit لي · تطبيق الموبايل",
   details:"كل التفاصيل",site:"موقع المشروع",
   gradeFull:"علامة مشروع التخرج: 96%",
-  b1:"لوحة تحكم ويب وتطبيق Flutter يخدمان 6 أدوار مستخدمين؛ بُني ضمن فريق من 4 أشخاص، وكنت ثاني أكبر مساهمة في الـ Backend والموبايل معاً.",
+  b1:"لوحة تحكم ويب وتطبيق Flutter يخدمان 6 أدوار مستخدمين؛ بُني ضمن فريق من 5 أشخاص، وكنت ثاني أكبر مساهمة في الـ Backend والموبايل معاً.",
   b2:"بنيت دردشة فورية فردية وجماعية لكل الأدوار على الويب والموبايل باستخدام Pusher.",
   b3:"أمّنت الـ API عبر إصلاح ثغرات IDOR وXSS، وإضافة تحديد معدّل الطلبات (Rate Limiting)، والمهام في الخلفية (Queues)، وفهرسة قاعدة البيانات، وسياسة الجلسة النشطة الواحدة.",
   b4:"سلّمت وحدة الطالب بشكل كامل: Laravel APIs وواجهات Flutter لكلٍّ من:",
