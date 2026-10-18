@@ -1,81 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Israa Munawwar | Backend Developer</title>
-<meta name="description" content="Backend developer specializing in Laravel, RESTful APIs and relational databases, with hands-on Flutter experience for mobile clients.">
+<meta name="description" content="Israa Munawwar, backend developer specializing in Laravel, RESTful APIs and relational databases, with hands-on Flutter experience for mobile clients. Damascus, Syria.">
+<meta name="author" content="Israa Munawwar">
+<meta name="keywords" content="Israa Munawwar, إسراء منور, Backend Developer, Laravel, PHP, REST API, MySQL, Flutter, Damascus, Syria">
+<link rel="canonical" href="https://israamunawwar.github.io/portfolio/">
 <meta property="og:title" content="Israa Munawwar | Backend Developer">
 <meta property="og:description" content="Backend developer specializing in Laravel, RESTful APIs and relational databases.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://israamunawwar.github.io/portfolio/">
+<meta property="og:image" content="https://israamunawwar.github.io/portfolio/images/edubridge.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Israa Munawwar","jobTitle":"Backend Developer","url":"https://israamunawwar.github.io/portfolio/","email":"mailto:esraamnower@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Damascus","addressCountry":"SY"},"knowsAbout":["Laravel","PHP","REST APIs","MySQL","Flutter"],"sameAs":["https://github.com/israamunawwar","https://www.linkedin.com/in/israa-munawwar"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236C4BF4'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='13' fill='white' text-anchor='middle'%3EIM%3C/text%3E%3C/svg%3E">
-<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: friendly backend portfolio. Hero = name + animated request-flow diagram (clients -> Laravel API -> MySQL). Content taken from the CV word for word. */
 :root{
   --bg:#F7F6FB; --surface:#FFFFFF; --ink:#221B3A; --muted:#655E80; --line:#E6E2F1;
   --accent:#6C4BF4; --soft:#EFEAFF; --coral:#F0643F; --coral-soft:#FFEBE4; --mint:#139C78; --mint-soft:#DDF5EC;
+  --scrim:rgba(20,14,40,.55);
   --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
   --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --arabic:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+@media (prefers-color-scheme:dark){:root{
   --bg:#13101F; --surface:#1C1830; --ink:#EEEAFB; --muted:#A39CC0; --line:#2D2747;
-  --accent:#A08BFF; --soft:#2A2350; --coral:#FF9479; --coral-soft:#3A2420; --mint:#4FD6AE; --mint-soft:#13332B; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#13101F; --surface:#1C1830; --ink:#EEEAFB; --muted:#A39CC0; --line:#2D2747;
-  --accent:#A08BFF; --soft:#2A2350; --coral:#FF9479; --coral-soft:#3A2420; --mint:#4FD6AE; --mint-soft:#13332B; color-scheme:dark}
+  --accent:#A08BFF; --soft:#2A2350; --coral:#FF9479; --coral-soft:#3A2420; --mint:#4FD6AE; --mint-soft:#13332B;
+  --scrim:rgba(5,3,12,.7); color-scheme:dark}}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
 a{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 
+/* Arabic mode */
+[dir="rtl"] body{font-family:var(--arabic)}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4{font-family:var(--arabic);letter-spacing:0!important;line-height:1.3}
+[dir="rtl"] h1{line-height:1.2;font-size:clamp(40px,6vw,68px)}
+[dir="rtl"] .role{font-family:var(--arabic);font-weight:600}
+.ltr{direction:ltr}
+
+/* progress */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:20;pointer-events:none}
+.progress i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--accent),var(--coral));transform-origin:left;transform:scaleX(0)}
+[dir="rtl"] .progress i{transform-origin:right}
+
 /* nav */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px)}
+.nav{position:sticky;top:0;z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);padding-top:env(safe-area-inset-top,0px)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
 .mono-mark{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--accent);color:var(--bg);font-family:var(--display);font-weight:800;font-size:16px;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
 .brand:hover .mono-mark{transform:rotate(-10deg) scale(1.08)}
+.nav-right{display:flex;align-items:center;gap:8px}
 .nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
 .nav ul a{font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 12px;border-radius:999px;transition:background .2s,color .2s}
 .nav ul a:hover{background:var(--soft);color:var(--accent)}
-@media (max-width:720px){.nav ul{display:none}}
+.lang{font:600 13.5px var(--arabic);padding:8px 14px;border-radius:999px;border:1.5px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer;transition:background .2s,color .2s}
+.lang:hover{background:var(--accent);color:var(--bg)}
+[dir="rtl"] .lang{font-family:var(--body)}
+@media (max-width:760px){.nav ul{display:none}}
 
 /* hero */
 .hero{position:relative;padding-block:56px 72px}
-.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);z-index:-1;animation:drift 14s ease-in-out infinite alternate}
 .blob.a{width:320px;height:320px;background:var(--accent);top:-40px;right:8%;opacity:.22}
 .blob.b{width:260px;height:260px;background:var(--coral);top:220px;left:-60px;opacity:.18;animation-delay:-6s}
 @keyframes drift{to{transform:translate(40px,30px) scale(1.12)}}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
 .hero-grid>*{min-width:0}
 .hello{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--mint);background:var(--mint-soft);padding:7px 14px 7px 10px;border-radius:999px}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--mint);animation:ping 2s infinite}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mint);flex:none;animation:ping 2s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--mint) 55%,transparent)}80%,100%{box-shadow:0 0 0 10px transparent}}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(46px,7.4vw,84px);line-height:.95;letter-spacing:-.035em;margin:20px 0 16px}
-h1 .wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.6s ease-in-out 1s 2}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,7.4vw,84px);line-height:.95;letter-spacing:-.035em;margin:20px 0 16px}
+.wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.6s ease-in-out 1s 2}
 @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%,40%{transform:rotate(-8deg)}}
 .role{font-family:var(--mono);font-size:clamp(14px,1.8vw,17px);color:var(--accent);margin:0 0 18px;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
-.role .caret{width:9px;height:1.2em;background:var(--accent);margin-left:4px;animation:blink 1s steps(1) infinite}
+.caret{width:9px;height:1.2em;background:var(--accent);margin-inline-start:4px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .summary{color:var(--muted);font-size:17px;max-width:36em;margin:0 0 28px}
 .summary b{color:var(--ink);font-weight:600}
 .actions{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 14.5px/1 var(--body);padding:13px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-color .2s,box-shadow .2s}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:600;font-size:14.5px;line-height:1;padding:13px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-color .2s,box-shadow .2s}
 .btn:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 24px -14px var(--accent)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.btn svg{width:16px;height:16px}
+.btn.coral{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn svg{width:16px;height:16px;flex:none}
 .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-size:14px;color:var(--muted)}
 
-/* flow diagram */
-.flow{background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:18px 16px 12px;box-shadow:0 30px 60px -40px color-mix(in srgb,var(--accent) 70%,transparent);animation:float 6s ease-in-out infinite}
+/* flow */
+.flow{direction:ltr;background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:18px 16px 12px;box-shadow:0 30px 60px -40px color-mix(in srgb,var(--accent) 70%,transparent);animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-8px)}}
 .flow-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted);padding:0 6px 8px}
 .flow-head .live{color:var(--mint);display:flex;align-items:center;gap:6px}
@@ -89,11 +114,12 @@ h1 .wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.6s ease-
 @keyframes dash{to{stroke-dashoffset:-22}}
 .pkt{fill:var(--accent)}.pkt.back{fill:var(--coral)}.pkt.db{fill:var(--mint)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);padding:6px 6px 2px}
+[dir="rtl"] .legend{direction:rtl;font-family:var(--arabic)}
 .legend span{display:flex;align-items:center;gap:6px}
 .legend i{width:8px;height:8px;border-radius:50%}
 
 /* ticker */
-.ticker{border-block:1.5px solid var(--line);overflow:hidden;padding-block:16px;background:var(--surface)}
+.ticker{direction:ltr;border-block:1.5px solid var(--line);overflow:hidden;padding-block:16px;background:var(--surface)}
 .track{display:flex;gap:40px;width:max-content;animation:scroll 40s linear infinite;font-family:var(--display);font-weight:600;font-size:22px;color:var(--muted)}
 .track span{display:flex;align-items:center;gap:40px;white-space:nowrap}
 .track span::after{content:"✦";color:var(--coral);font-size:14px}
@@ -101,52 +127,71 @@ h1 .wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.6s ease-
 @keyframes scroll{to{transform:translateX(-50%)}}
 
 /* sections */
-section{padding-block:88px 24px}
-.label{display:inline-block;font-family:var(--mono);font-size:13px;color:var(--coral);background:var(--coral-soft);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+section{padding-block:88px 24px;scroll-margin-top:70px}
+.label{display:inline-block;direction:ltr;font-family:var(--mono);font-size:13px;color:var(--coral);background:var(--coral-soft);padding:4px 12px;border-radius:999px;margin-bottom:14px}
 h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);letter-spacing:-.03em;line-height:1.05;margin:0 0 36px}
-
-/* reveal: visible by default, animated only where scroll timelines exist */
 @supports (animation-timeline:view()){
   .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
   @keyframes rise{from{opacity:.15;transform:translateY(40px) scale(.98)}to{opacity:1;transform:none}}
 }
 
 /* Edu Bridge */
-.edu{position:relative;background:var(--surface);border:1.5px solid var(--line);border-radius:28px;padding:36px;overflow:hidden}
-.edu::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--soft);right:-120px;top:-160px;z-index:0}
-.edu>*{position:relative;z-index:1}
-.edu-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
-.edu-top>div{min-width:0}
+.edu{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);background:var(--surface);border:1.5px solid var(--line);border-radius:28px;overflow:hidden}
+.edu-media{position:relative;min-height:100%;background:#0d0b16;overflow:hidden;cursor:zoom-in;border:0;padding:0}
+.edu-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.edu-media:hover img{transform:scale(1.05)}
+.grade{position:absolute;top:16px;inset-inline-start:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:86px;height:86px;border-radius:50%;background:var(--coral);color:#fff;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);animation:spin-in 1s cubic-bezier(.3,1.6,.5,1) both .3s}
+.grade b{font-family:var(--display);font-size:26px;line-height:1}
+.grade span{font-size:10.5px;letter-spacing:.04em;text-transform:uppercase}
+[dir="rtl"] .grade span{text-transform:none;font-size:11px}
+@keyframes spin-in{from{transform:scale(.4) rotate(-40deg)}}
+.edu-body{padding:34px;display:flex;flex-direction:column;gap:18px;min-width:0}
 .edu h3{font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;line-height:1;margin:0 0 6px}
-.edu .subtitle{font-size:17px;color:var(--muted);margin:0 0 14px}
+.subtitle{font-size:17px;color:var(--muted);margin:0}
 .badges{display:flex;flex-wrap:wrap;gap:8px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--mint-soft);color:var(--mint)}
 .badge.v{background:var(--soft);color:var(--accent)}
-.stats{display:flex;gap:12px;flex-wrap:wrap}
-.stat{background:var(--bg);border:1.5px solid var(--line);border-radius:18px;padding:14px 18px;min-width:108px;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:12px 14px;min-width:0;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
 .stat:hover{transform:translateY(-4px) rotate(-2deg)}
-.stat b{display:block;font-family:var(--display);font-weight:800;font-size:36px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
-.stat span{font-size:13px;color:var(--muted)}
-.contrib{list-style:none;padding:0;margin:32px 0 28px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.contrib li{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1.5px solid var(--line);border-radius:18px;padding:18px;min-width:0;transition:border-color .2s,transform .3s}
-.contrib li:hover{border-color:var(--accent);transform:translateY(-3px)}
-.contrib li:first-child{grid-column:1/-1}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:30px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums;direction:ltr;text-align:start}
+[dir="rtl"] .stat b{text-align:right}
+.stat span{font-size:12.5px;color:var(--muted);line-height:1.3;display:block;margin-top:4px}
+.highlights{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.highlights li{display:flex;align-items:center;gap:7px;font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:12px;background:var(--bg);border:1.5px solid var(--line)}
+.highlights svg{width:16px;height:16px;color:var(--accent)}
+.stackline{display:flex;flex-wrap:wrap;gap:6px;direction:ltr}
+[dir="rtl"] .stackline{justify-content:flex-end}
+.stackline span{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:8px;background:var(--soft);color:var(--accent)}
+@media (max-width:900px){.edu{grid-template-columns:1fr}.edu-media{aspect-ratio:16/10;max-width:100%}}
+@media (max-width:560px){.edu-body{padding:22px 18px}.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* modal */
+dialog{width:min(860px,calc(100% - 24px));max-height:calc(100% - 32px);padding:0;border:0;border-radius:24px;background:var(--surface);color:var(--ink);box-shadow:0 40px 100px -30px rgba(0,0,0,.6)}
+dialog::backdrop{background:var(--scrim);backdrop-filter:blur(4px)}
+dialog[open]{animation:pop .35s cubic-bezier(.3,1.4,.5,1)}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.96)}}
+.m-head{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 24px;background:var(--surface);border-bottom:1.5px solid var(--line)}
+.m-head h3{font-family:var(--display);font-size:24px;font-weight:800;margin:0}
+.x{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font-size:20px;line-height:1;cursor:pointer;flex:none}
+.x:hover{border-color:var(--accent)}
+.m-body{padding:24px;display:grid;gap:22px}
+.m-img{border-radius:16px;overflow:hidden;max-height:420px}
+.m-img img{width:100%;height:100%;object-fit:cover}
+.contrib{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.contrib li{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:16px;min-width:0}
+.contrib p{margin:0;font-size:15.5px}
 .ico{flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--soft);color:var(--accent)}
 .ico svg{width:22px;height:22px}
 .ico.c{background:var(--coral-soft);color:var(--coral)}.ico.m{background:var(--mint-soft);color:var(--mint)}
-.contrib li:hover .ico{animation:bop .5s}
 @keyframes bop{40%{transform:translateY(-5px) rotate(-8deg)}}
-.contrib p{margin:0;font-size:15.5px}
 .chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:10px 0 0}
 .chips li{font-family:var(--mono);font-size:12px;padding:4px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
-.edu-foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
-.stackline{display:flex;flex-wrap:wrap;gap:6px}
-.stackline span{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:8px;background:var(--soft);color:var(--accent)}
-@media (max-width:760px){.edu{padding:24px 18px;border-radius:22px}.contrib{grid-template-columns:1fr}}
+.m-foot{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
 
 /* other projects */
 .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
-.proj{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:26px;min-width:0;transition:transform .35s cubic-bezier(.3,1.5,.5,1),border-color .2s,box-shadow .3s}
+.proj{display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:26px;min-width:0;transition:transform .35s cubic-bezier(.3,1.5,.5,1),border-color .2s,box-shadow .3s}
 .proj:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 22px 40px -28px var(--accent)}
 .proj-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .proj .ico{width:50px;height:50px;border-radius:15px}
@@ -173,7 +218,7 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);l
 /* education */
 .trio{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
 .card{background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:24px;min-width:0}
-.card h4{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin:0 0 14px;font-weight:500}
+.card h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin:0 0 14px;font-weight:600}
 .card p{margin:0}
 .card .sub{color:var(--muted);font-size:14px}
 .card .gap{margin-top:12px}
@@ -191,21 +236,33 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);l
 a.cl:hover{transform:translateY(-4px) rotate(-1deg)}
 .cl>div{min-width:0;flex:1}
 .cl small{display:block;font-size:12px;color:var(--muted);font-weight:600}
-.cl .v{display:block;font-size:14.5px;font-weight:600;overflow-wrap:anywhere}
+.cl .v{display:block;font-size:14.5px;font-weight:600;overflow-wrap:anywhere;direction:ltr;text-align:start}
+[dir="rtl"] .cl .v{text-align:right}
 .cl .ico{width:40px;height:40px}
-.copy{flex:none;font:600 12px var(--body);padding:7px 11px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.copy{flex:none;font:inherit;font-weight:600;font-size:12px;padding:7px 11px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
 .copy:hover{border-color:var(--accent)}
 @media (max-width:900px){.cgrid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:600px){.cgrid{grid-template-columns:1fr}.contact-box{padding:32px 20px;border-radius:24px}}
+
+/* floating dock */
+.dock{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-end:calc(18px + env(safe-area-inset-right,0px));z-index:15;display:flex;flex-direction:column;gap:10px;transition:opacity .3s,transform .3s}
+.dock.hide{opacity:0;transform:translateY(20px);pointer-events:none}
+.dock a{position:relative;width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 10px 24px -8px rgba(0,0,0,.4);transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.dock a:hover{transform:scale(1.12)}
+.dock a svg{width:24px;height:24px}
+.dock .wa{background:#1FAF5A}.dock .tg{background:#2A8BD0}.dock .em{background:var(--coral)}
+.dock a span{position:absolute;inset-inline-end:60px;white-space:nowrap;font-size:13px;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--ink);color:var(--bg);opacity:0;transform:translateX(6px);transition:.2s;pointer-events:none}
+.dock a:hover span,.dock a:focus-visible span{opacity:1;transform:none}
+
 footer{padding-block:24px 36px;font-size:13.5px;color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding-block:32px 56px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.pkt{display:none}}
 </style>
-
 </head>
 <body>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
   <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
@@ -227,18 +284,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <symbol id="i-tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.2 15c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13 1.6 11.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.4 1.5z"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 7l9 6 9-6"/></symbol>
   <symbol id="i-call" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
 </svg>
+
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="mono-mark">IM</span>Israa Munawwar</a>
-    <nav><ul>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul></nav>
+    <a class="brand" href="#top"><span class="mono-mark">IM</span><span data-i18n="name">Israa Munawwar</span></a>
+    <div class="nav-right">
+      <nav><ul>
+        <li><a href="#projects" data-i18n="nav1">Projects</a></li>
+        <li><a href="#skills" data-i18n="nav2">Skills</a></li>
+        <li><a href="#education" data-i18n="nav3">Education</a></li>
+        <li><a href="#contact" data-i18n="nav4">Contact</a></li>
+      </ul></nav>
+      <button class="lang" id="lang-toggle" type="button" aria-label="Switch language">عربي</button>
+    </div>
   </div>
 </header>
 
@@ -247,22 +311,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="blob a"></div><div class="blob b"></div>
     <div class="wrap hero-grid">
       <div>
-        <span class="hello"><span class="dot"></span>Seeking a junior backend developer or internship role</span>
-        <h1>Hi, I'm Israa <span class="wave">👋</span></h1>
-        <p class="role"><span id="typed">Backend Developer | Laravel &amp; REST APIs</span><span class="caret"></span></p>
-        <p class="summary">Backend developer specializing in <b>Laravel, RESTful APIs and relational databases</b>, with hands-on Flutter experience for mobile clients. Second-largest contributor to a 6-role university management platform, where I built the <b>real-time chat module</b>, hardened <b>API security</b> (IDOR, XSS, rate limiting) and delivered the <b>student module end to end</b>.</p>
+        <span class="hello"><span class="dot"></span><span data-i18n="hello">Seeking a junior backend developer or internship role</span></span>
+        <h1 data-i18n="h1">Hi, I'm Israa <span class="wave">👋</span></h1>
+        <p class="role"><span data-i18n="role">Backend Developer | Laravel &amp; REST APIs</span><span class="caret"></span></p>
+        <p class="summary" data-i18n="summary">Backend developer specializing in <b>Laravel, RESTful APIs and relational databases</b>, with hands-on Flutter experience for mobile clients. Second-largest contributor to a 6-role university management platform, where I built the <b>real-time chat module</b>, hardened <b>API security</b> (IDOR, XSS, rate limiting) and delivered the <b>student module end to end</b>.</p>
         <div class="actions">
-          <a class="btn primary" href="#projects">My projects ↓</a>
-          <a class="btn" href="Israa_Munawwar_CV.pdf" download>Download CV</a>
+          <a class="btn primary" href="#projects" data-i18n="cta1">My projects ↓</a>
+          <a class="btn coral" href="Israa_Munawwar_CV.pdf" download><svg><use href="#i-dl"/></svg><span data-i18n="cta2">Download CV</span></a>
           <a class="btn" href="https://github.com/israamunawwar" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/israa-munawwar" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
-          <a class="btn" href="https://wa.me/963954652404" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
-          <a class="btn" href="https://t.me/+963954652404" target="_blank" rel="noopener"><svg><use href="#i-tg"/></svg>Telegram</a>
         </div>
-        <div class="meta"><span>📍 Damascus, Syria</span><span>🗣 Arabic · English</span></div>
+        <div class="meta"><span data-i18n="loc">📍 Damascus, Syria</span><span data-i18n="langs">🗣 Arabic · English</span></div>
       </div>
 
-      <div class="flow" aria-label="Diagram: Flutter app and web dashboard send requests to a Laravel REST API that reads and writes MySQL">
+      <div class="flow" aria-label="Edu Bridge architecture: Flutter app and web dashboard call a Laravel REST API backed by MySQL">
         <div class="flow-head"><span>edu-bridge / architecture</span><span class="live"><span class="dot"></span>live</span></div>
         <svg viewBox="0 0 520 330">
           <path id="w1" class="wire" d="M150 70 C 190 70, 185 135, 215 135"/>
@@ -270,7 +332,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <path id="w3" class="wire" d="M375 165 L 405 165"/>
           <path id="w1b" d="M215 145 C 185 145, 190 80, 150 80" fill="none"/>
           <path id="w2b" d="M215 185 C 185 185, 190 250, 150 250" fill="none"/>
-
           <g class="node"><rect x="10" y="40" width="140" height="60" rx="14"/><text x="30" y="66">Flutter App</text><text class="sub" x="30" y="85">Provider · Dio</text></g>
           <g class="node"><rect x="10" y="230" width="140" height="60" rx="14"/><text x="30" y="256">Web Dashboard</text><text class="sub" x="30" y="275">6 user roles</text></g>
           <g class="node api"><rect x="215" y="95" width="160" height="140" rx="18"/>
@@ -280,14 +341,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <text class="sub" x="235" y="195">→ Pusher realtime</text>
             <text class="sub" x="235" y="215">→ Rate limiting</text></g>
           <g class="node db"><rect x="405" y="130" width="105" height="70" rx="14"/><text x="425" y="160">MySQL</text><text class="sub" x="425" y="180">indexed</text></g>
-
           <circle class="pkt" r="5"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#w1"/></animateMotion></circle>
           <circle class="pkt" r="5"><animateMotion dur="2.6s" begin="0.7s" repeatCount="indefinite"><mpath href="#w2"/></animateMotion></circle>
           <circle class="pkt back" r="5"><animateMotion dur="2.4s" begin="1.1s" repeatCount="indefinite"><mpath href="#w1b"/></animateMotion></circle>
           <circle class="pkt back" r="5"><animateMotion dur="2.8s" begin="0.3s" repeatCount="indefinite"><mpath href="#w2b"/></animateMotion></circle>
           <circle class="pkt db" r="5"><animateMotion dur="1.1s" repeatCount="indefinite"><mpath href="#w3"/></animateMotion></circle>
         </svg>
-        <div class="legend"><span><i style="background:var(--accent)"></i>request</span><span><i style="background:var(--coral)"></i>real-time event</span><span><i style="background:var(--mint)"></i>query</span></div>
+        <div class="legend"><span><i style="background:var(--accent)"></i><b data-i18n="lg1" style="font-weight:400">request</b></span><span><i style="background:var(--coral)"></i><b data-i18n="lg2" style="font-weight:400">real-time event</b></span><span><i style="background:var(--mint)"></i><b data-i18n="lg3" style="font-weight:400">query</b></span></div>
       </div>
     </div>
   </div>
@@ -302,39 +362,38 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section id="projects">
     <div class="wrap">
       <span class="label">GET /projects</span>
-      <h2>Projects</h2>
+      <h2 data-i18n="projects">Projects</h2>
 
       <article class="edu reveal">
-        <div class="edu-top">
+        <button class="edu-media" type="button" data-open="edu-modal" aria-label="Open Edu Bridge details">
+          <img src="images/edubridge.jpg" alt="Edu Bridge" loading="lazy" width="1024" height="1024">
+          <span class="grade"><b>96%</b><span data-i18n="gradeLbl">Grade</span></span>
+        </button>
+        <div class="edu-body">
           <div>
             <h3>Edu Bridge</h3>
-            <p class="subtitle">University Management Platform (Graduation Project)</p>
-            <div class="badges">
-              <span class="badge"><span class="dot"></span>Live on the Damascus Intermediate Institute server</span>
-              <span class="badge v">Backend · Mobile App</span>
-            </div>
+            <p class="subtitle" data-i18n="eduSub">University Management Platform (Graduation Project)</p>
+          </div>
+          <div class="badges">
+            <span class="badge"><span class="dot"></span><span data-i18n="live">Live on the Damascus Intermediate Institute server</span></span>
+            <span class="badge v" data-i18n="bm">Backend · Mobile App</span>
           </div>
           <div class="stats">
-            <div class="stat"><b data-count="6">6</b><span>user roles</span></div>
-            <div class="stat"><b data-count="4">4</b><span>team members</span></div>
-            <div class="stat"><b data-count="9">9</b><span>focused controllers</span></div>
+            <div class="stat"><b data-count="96" data-suffix="%">96%</b><span data-i18n="s0">project grade</span></div>
+            <div class="stat"><b data-count="6">6</b><span data-i18n="s1">user roles</span></div>
+            <div class="stat"><b data-count="4">4</b><span data-i18n="s2">team members</span></div>
+            <div class="stat"><b data-count="9">9</b><span data-i18n="s3">focused controllers</span></div>
           </div>
-        </div>
-
-        <ul class="contrib">
-          <li><span class="ico"><svg><use href="#i-users"/></svg></span><p>Web dashboard and Flutter app serving 6 user roles; built in a team of 4 as the second-largest contributor to both backend and mobile.</p></li>
-          <li><span class="ico c"><svg><use href="#i-chat"/></svg></span><div><p>Built one-to-one and group real-time chat for all roles on web and mobile using Pusher.</p></div></li>
-          <li><span class="ico m"><svg><use href="#i-shield"/></svg></span><div><p>Secured the API by fixing IDOR and XSS vulnerabilities and adding rate limiting, background queues, database indexing and a single-active-session policy.</p></div></li>
-          <li><span class="ico"><svg><use href="#i-user"/></svg></span><div><p>Delivered the student module end to end: Laravel APIs and Flutter screens for:</p><ul class="chips"><li>dashboard</li><li>attendance</li><li>schedule</li><li>assignments</li><li>notifications</li></ul></div></li>
-          <li><span class="ico c"><svg><use href="#i-layers"/></svg></span><div><p>Refactored a monolithic admin controller into 9 focused controllers with FormRequest validation; added ArcFace face verification, a Telegram bot and PDF/Excel reports.</p></div></li>
-        </ul>
-
-        <div class="edu-foot">
+          <ul class="highlights">
+            <li><svg><use href="#i-chat"/></svg><span data-i18n="h1x">Real-time chat</span></li>
+            <li><svg><use href="#i-shield"/></svg><span data-i18n="h2x">API security</span></li>
+            <li><svg><use href="#i-user"/></svg><span data-i18n="h3x">Student module</span></li>
+            <li><svg><use href="#i-layers"/></svg><span data-i18n="h4x">Refactoring</span></li>
+          </ul>
           <div class="stackline"><span>Laravel 12</span><span>Sanctum</span><span>Pusher</span><span>MySQL</span><span>Flutter</span></div>
           <div class="actions">
-            <a class="btn primary" href="https://edu-bradge.netlify.app" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Project website</a>
-            <a class="btn" href="https://github.com/majdoulee2006/edu_bridge_backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Backend</a>
-            <a class="btn" href="https://github.com/majdoulee2006/Edu_Pridge_flutter" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Mobile App</a>
+            <button class="btn primary" type="button" data-open="edu-modal" id="open-edu"><svg><use href="#i-eye"/></svg><span data-i18n="details">Full details</span></button>
+            <a class="btn" href="https://edu-bradge.netlify.app" target="_blank" rel="noopener"><svg><use href="#i-out"/></svg><span data-i18n="site">Project website</span></a>
           </div>
         </div>
       </article>
@@ -343,25 +402,25 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <article class="proj reveal">
           <div class="proj-top"><span class="ico"><svg><use href="#i-lock"/></svg></span><a class="gh" href="https://github.com/israamunawwar/DrPassword_Backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
           <h3>DrPasswords API</h3>
-          <p>REST API for a physical password manager (Flutter app + ESP32 device) with token authentication and encrypted credential storage synced between app and hardware.</p>
+          <p data-i18n="p1">REST API for a physical password manager (Flutter app + ESP32 device) with token authentication and encrypted credential storage synced between app and hardware.</p>
           <div class="stackline"><span>Laravel</span><span>Sanctum</span></div>
         </article>
         <article class="proj reveal">
           <div class="proj-top"><span class="ico m"><svg><use href="#i-box"/></svg></span><a class="gh" href="https://github.com/israamunawwar/WMS-Backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
           <h3>Warehouse Management System</h3>
-          <p>Warehouse and lab-equipment system for an educational institute with roles and permissions, borrow requests, maintenance tracking and Excel/PDF reports.</p>
+          <p data-i18n="p2">Warehouse and lab-equipment system for an educational institute with roles and permissions, borrow requests, maintenance tracking and Excel/PDF reports.</p>
           <div class="stackline"><span>Laravel</span><span>MySQL</span></div>
         </article>
         <article class="proj reveal">
           <div class="proj-top"><span class="ico c"><svg><use href="#i-cart"/></svg></span><a class="gh" href="https://github.com/israamunawwar/folklore-platform" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
           <h3>Palestinian Folklore E-Commerce Platform</h3>
-          <p>Authentication, order processing and a dynamic shopping cart, with an admin dashboard for real-time inventory monitoring.</p>
+          <p data-i18n="p3">Authentication, order processing and a dynamic shopping cart, with an admin dashboard for real-time inventory monitoring.</p>
           <div class="stackline"><span>Laravel</span><span>MySQL</span></div>
         </article>
         <article class="proj reveal">
           <div class="proj-top"><span class="ico"><svg><use href="#i-desk"/></svg></span><a class="gh" href="https://github.com/israamunawwar/Warehouse-Automation-System" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
           <h3>Warehouse Automation System (Desktop)</h3>
-          <p>Desktop inventory application with location tracking, transaction reports and automatic low-stock alerts.</p>
+          <p data-i18n="p4">Desktop inventory application with location tracking, transaction reports and automatic low-stock alerts.</p>
           <div class="stackline"><span>Python</span><span>Tkinter</span><span>SQL Server</span></div>
         </article>
       </div>
@@ -371,14 +430,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section id="skills">
     <div class="wrap">
       <span class="label">GET /skills</span>
-      <h2>Technical Skills</h2>
+      <h2 data-i18n="skills">Technical Skills</h2>
       <div class="skills">
-        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-code"/></svg></span>Backend</h4><ul class="pills"><li>PHP</li><li>Laravel (Sanctum, Queues, Pusher)</li><li>RESTful API Design</li><li>C#</li><li>ASP.NET Core</li><li>Python</li></ul></div>
-        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-db"/></svg></span>Databases</h4><ul class="pills"><li>MySQL</li><li>SQL Server</li><li>Oracle</li><li>SQLite</li><li>ERD Design</li><li>Indexing</li><li>Query Optimization</li></ul></div>
-        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-shield"/></svg></span>Security</h4><ul class="pills"><li>Token Authentication</li><li>IDOR &amp; XSS Remediation</li><li>Rate Limiting</li><li>Session Management</li></ul></div>
-        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-phone"/></svg></span>Mobile</h4><ul class="pills"><li>Flutter</li><li>Dart</li><li>Provider</li><li>Dio</li></ul></div>
-        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-tool"/></svg></span>Tools</h4><ul class="pills"><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Postman</li><li>Linux</li><li>Figma</li></ul></div>
-        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-net"/></svg></span>Foundations</h4><ul class="pills"><li>Systems Analysis &amp; Design</li><li>Networking Fundamentals (CCNA coursework)</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-code"/></svg></span><span data-i18n="k1">Backend</span></h4><ul class="pills"><li>PHP</li><li>Laravel (Sanctum, Queues, Pusher)</li><li>RESTful API Design</li><li>C#</li><li>ASP.NET Core</li><li>Python</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-db"/></svg></span><span data-i18n="k2">Databases</span></h4><ul class="pills"><li>MySQL</li><li>SQL Server</li><li>Oracle</li><li>SQLite</li><li>ERD Design</li><li>Indexing</li><li>Query Optimization</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-shield"/></svg></span><span data-i18n="k3">Security</span></h4><ul class="pills"><li>Token Authentication</li><li>IDOR &amp; XSS Remediation</li><li>Rate Limiting</li><li>Session Management</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-phone"/></svg></span><span data-i18n="k4">Mobile</span></h4><ul class="pills"><li>Flutter</li><li>Dart</li><li>Provider</li><li>Dio</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-tool"/></svg></span><span data-i18n="k5">Tools</span></h4><ul class="pills"><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Postman</li><li>Linux</li><li>Figma</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-net"/></svg></span><span data-i18n="k6">Foundations</span></h4><ul class="pills"><li data-i18n="f1">Systems Analysis &amp; Design</li><li data-i18n="f2">Networking Fundamentals (CCNA coursework)</li></ul></div>
       </div>
     </div>
   </section>
@@ -386,23 +445,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section id="education">
     <div class="wrap">
       <span class="label">GET /education</span>
-      <h2>Education</h2>
+      <h2 data-i18n="edu">Education</h2>
       <div class="trio">
         <div class="card reveal">
-          <h4>Education</h4>
-          <p><strong>Technical Diploma in Computer Information Systems</strong></p>
-          <p class="sub">Damascus Training Centre (UNRWA), Damascus, Syria</p>
+          <h4 data-i18n="e0">Education</h4>
+          <p><strong data-i18n="e1">Technical Diploma in Computer Information Systems</strong></p>
+          <p class="sub" data-i18n="e2">Damascus Training Centre (UNRWA), Damascus, Syria</p>
           <p class="sub">2024 – 2026</p>
         </div>
         <div class="card reveal">
-          <h4>Courses</h4>
-          <p><strong>Frontend Web Development</strong></p><p class="sub">CodeCraft (Online)</p>
-          <p class="gap"><strong>Intermediate English</strong></p><p class="sub">UNRWA, Damascus</p>
+          <h4 data-i18n="c0">Courses</h4>
+          <p><strong data-i18n="c1">Frontend Web Development</strong></p><p class="sub" data-i18n="c2">CodeCraft (Online)</p>
+          <p class="gap"><strong data-i18n="c3">Intermediate English</strong></p><p class="sub" data-i18n="c4">UNRWA, Damascus</p>
         </div>
         <div class="card reveal">
-          <h4>Languages</h4>
-          <p><strong>Arabic</strong></p><p class="sub">Native</p>
-          <p class="gap"><strong>English</strong></p><p class="sub">Professional Working Proficiency</p>
+          <h4 data-i18n="l0">Languages</h4>
+          <p><strong data-i18n="l1">Arabic</strong></p><p class="sub" data-i18n="l2">Native</p>
+          <p class="gap"><strong data-i18n="l3">English</strong></p><p class="sub" data-i18n="l4">Professional Working Proficiency</p>
         </div>
       </div>
     </div>
@@ -411,13 +470,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section id="contact" class="contact">
     <div class="wrap">
       <div class="contact-box reveal">
-        <h2>Contact</h2>
-        <p>Seeking a junior backend developer or internship role.</p>
+        <h2 data-i18n="contact">Contact</h2>
+        <p data-i18n="hello2">Seeking a junior backend developer or internship role.</p>
         <div class="cgrid">
           <a class="cl" href="https://wa.me/963954652404" target="_blank" rel="noopener"><span class="ico m"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><span class="v">+963 954 652 404</span></div></a>
           <a class="cl" href="https://t.me/+963954652404" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-tg"/></svg></span><div><small>Telegram</small><span class="v">+963 954 652 404</span></div></a>
-          <div class="cl"><span class="ico c"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><span class="v" id="v-email">esraamnower@gmail.com</span></div><button class="copy" data-copy="v-email" id="copy-email">Copy</button></div>
-          <div class="cl"><span class="ico m"><svg><use href="#i-call"/></svg></span><div><small>Phone</small><span class="v" id="v-phone">+963 954 652 404</span></div><button class="copy" data-copy="v-phone" id="copy-phone">Copy</button></div>
+          <div class="cl"><span class="ico c"><svg><use href="#i-mail"/></svg></span><div><small data-i18n="email">Email</small><span class="v" id="v-email">esraamnower@gmail.com</span></div><button class="copy" type="button" data-copy="v-email" data-i18n="copy">Copy</button></div>
+          <div class="cl"><span class="ico m"><svg><use href="#i-call"/></svg></span><div><small data-i18n="phone">Phone</small><span class="v" id="v-phone">+963 954 652 404</span></div><button class="copy" type="button" data-copy="v-phone" data-i18n="copy">Copy</button></div>
           <a class="cl" href="https://www.linkedin.com/in/israa-munawwar" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-in"/></svg></span><div><small>LinkedIn</small><span class="v">linkedin.com/in/israa-munawwar</span></div></a>
           <a class="cl" href="https://github.com/israamunawwar" target="_blank" rel="noopener"><span class="ico c"><svg><use href="#i-gh"/></svg></span><div><small>GitHub</small><span class="v">github.com/israamunawwar</span></div></a>
         </div>
@@ -426,28 +485,132 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Israa Munawwar</span><span>Damascus, Syria</span></div></footer>
+<dialog id="edu-modal" aria-labelledby="edu-modal-title">
+  <div class="m-head"><h3 id="edu-modal-title">Edu Bridge</h3><button class="x" type="button" data-close aria-label="Close">×</button></div>
+  <div class="m-body">
+    <div class="m-img"><img src="images/edubridge.jpg" alt="Edu Bridge" loading="lazy" width="1024" height="1024"></div>
+    <div>
+      <p class="subtitle" data-i18n="eduSub">University Management Platform (Graduation Project)</p>
+      <div class="badges" style="margin-top:12px">
+        <span class="badge"><span class="dot"></span><span data-i18n="live">Live on the Damascus Intermediate Institute server</span></span>
+        <span class="badge v" data-i18n="gradeFull">Graduation project grade: 96%</span>
+      </div>
+    </div>
+    <ul class="contrib">
+      <li><span class="ico"><svg><use href="#i-users"/></svg></span><p data-i18n="b1">Web dashboard and Flutter app serving 6 user roles; built in a team of 4 as the second-largest contributor to both backend and mobile.</p></li>
+      <li><span class="ico c"><svg><use href="#i-chat"/></svg></span><p data-i18n="b2">Built one-to-one and group real-time chat for all roles on web and mobile using Pusher.</p></li>
+      <li><span class="ico m"><svg><use href="#i-shield"/></svg></span><p data-i18n="b3">Secured the API by fixing IDOR and XSS vulnerabilities and adding rate limiting, background queues, database indexing and a single-active-session policy.</p></li>
+      <li><span class="ico"><svg><use href="#i-user"/></svg></span><div><p data-i18n="b4">Delivered the student module end to end: Laravel APIs and Flutter screens for:</p><ul class="chips"><li data-i18n="m1">dashboard</li><li data-i18n="m2">attendance</li><li data-i18n="m3">schedule</li><li data-i18n="m4">assignments</li><li data-i18n="m5">notifications</li></ul></div></li>
+      <li><span class="ico c"><svg><use href="#i-layers"/></svg></span><p data-i18n="b5">Refactored a monolithic admin controller into 9 focused controllers with FormRequest validation; added ArcFace face verification, a Telegram bot and PDF/Excel reports.</p></li>
+    </ul>
+    <div class="m-foot">
+      <div class="stackline"><span>Laravel 12</span><span>Sanctum</span><span>Pusher</span><span>MySQL</span><span>Flutter</span></div>
+      <div class="actions">
+        <a class="btn primary" href="https://edu-bradge.netlify.app" target="_blank" rel="noopener"><svg><use href="#i-out"/></svg><span data-i18n="site">Project website</span></a>
+        <a class="btn" href="https://github.com/majdoulee2006/edu_bridge_backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Backend</a>
+        <a class="btn" href="https://github.com/majdoulee2006/Edu_Pridge_flutter" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Mobile App</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="dock hide" id="dock">
+  <a class="wa" href="https://wa.me/963954652404" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  <a class="tg" href="https://t.me/+963954652404" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-tg"/></svg><span>Telegram</span></a>
+  <a class="em" href="mailto:esraamnower@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg><span data-i18n="email">Email</span></a>
+</div>
+
+<footer><div class="wrap"><span>© 2026 <span data-i18n="name">Israa Munawwar</span></span><span data-i18n="loc2">Damascus, Syria</span></div></footer>
 
 <script>
-// count-up on the Edu Bridge numbers (final values are already in the HTML)
+const AR={
+  name:"إسراء منور",
+  nav1:"المشاريع",nav2:"المهارات",nav3:"التعليم",nav4:"تواصل",
+  hello:"أبحث عن وظيفة مطوّرة Backend مبتدئة (Junior) أو تدريب",
+  h1:'مرحباً، أنا إسراء <span class="wave">👋</span>',
+  role:"مطوّرة Backend | Laravel و REST APIs",
+  summary:"مطوّرة Backend متخصصة في <b>Laravel وRESTful APIs وقواعد البيانات العلائقية</b>، مع خبرة عملية في Flutter لتطبيقات الموبايل. ثاني أكبر مساهمة في منصة لإدارة الجامعات تخدم 6 أدوار مستخدمين، حيث بنيت <b>وحدة الدردشة الفورية</b>، وعزّزت <b>أمان الـ API</b> (IDOR وXSS وتحديد معدّل الطلبات)، وسلّمت <b>وحدة الطالب بشكل كامل</b>.",
+  cta1:"مشاريعي ↓",cta2:"تحميل السيرة الذاتية",
+  loc:"📍 دمشق، سوريا",langs:"🗣 العربية · الإنكليزية",loc2:"دمشق، سوريا",
+  lg1:"طلب",lg2:"حدث فوري",lg3:"استعلام",
+  projects:"المشاريع",
+  gradeLbl:"العلامة",
+  eduSub:"منصة لإدارة الجامعات (مشروع التخرج)",
+  live:"يعمل على سيرفر معهد دمشق المتوسط",
+  bm:"Backend · تطبيق الموبايل",
+  s0:"علامة المشروع",s1:"أدوار مستخدمين",s2:"أعضاء الفريق",s3:"controllers منفصلة",
+  h1x:"دردشة فورية",h2x:"أمان الـ API",h3x:"وحدة الطالب",h4x:"إعادة هيكلة الكود",
+  details:"كل التفاصيل",site:"موقع المشروع",
+  gradeFull:"علامة مشروع التخرج: 96%",
+  b1:"لوحة تحكم ويب وتطبيق Flutter يخدمان 6 أدوار مستخدمين؛ بُني ضمن فريق من 4 أشخاص، وكنت ثاني أكبر مساهمة في الـ Backend والموبايل معاً.",
+  b2:"بنيت دردشة فورية فردية وجماعية لكل الأدوار على الويب والموبايل باستخدام Pusher.",
+  b3:"أمّنت الـ API عبر إصلاح ثغرات IDOR وXSS، وإضافة تحديد معدّل الطلبات (Rate Limiting)، والمهام في الخلفية (Queues)، وفهرسة قاعدة البيانات، وسياسة الجلسة النشطة الواحدة.",
+  b4:"سلّمت وحدة الطالب بشكل كامل: Laravel APIs وواجهات Flutter لكلٍّ من:",
+  m1:"لوحة التحكم",m2:"الحضور",m3:"البرنامج",m4:"الوظائف",m5:"الإشعارات",
+  b5:"أعدت هيكلة controller إداري ضخم إلى 9 controllers منفصلة مع تحقق FormRequest؛ وأضفت التحقق من الوجه بـ ArcFace، وبوت Telegram، وتقارير PDF/Excel.",
+  p1:"REST API لمدير كلمات مرور فيزيائي (تطبيق Flutter + جهاز ESP32) مع مصادقة بالـ Token وتخزين مشفّر لبيانات الدخول تتم مزامنته بين التطبيق والجهاز.",
+  p2:"نظام لإدارة المستودع ومعدات المخابر لمعهد تعليمي، مع أدوار وصلاحيات، وطلبات إعارة، ومتابعة الصيانة، وتقارير Excel/PDF.",
+  p3:"مصادقة، ومعالجة الطلبات، وسلة تسوق ديناميكية، مع لوحة تحكم إدارية لمراقبة المخزون بشكل فوري.",
+  p4:"تطبيق سطح مكتب لإدارة المخزون مع تتبع المواقع، وتقارير الحركات، وتنبيهات تلقائية عند انخفاض المخزون.",
+  skills:"المهارات التقنية",k1:"Backend",k2:"قواعد البيانات",k3:"الأمان",k4:"الموبايل",k5:"الأدوات",k6:"الأساسيات",
+  f1:"تحليل وتصميم النظم",f2:"أساسيات الشبكات (مقررات CCNA)",
+  edu:"التعليم",e0:"التعليم",e1:"دبلوم تقني في نظم المعلومات الحاسوبية",e2:"مركز تدريب دمشق (الأونروا)، دمشق، سوريا",
+  c0:"الدورات",c1:"تطوير واجهات الويب (Frontend)",c2:"CodeCraft (أونلاين)",c3:"اللغة الإنكليزية – مستوى متوسط",c4:"الأونروا، دمشق",
+  l0:"اللغات",l1:"العربية",l2:"اللغة الأم",l3:"الإنكليزية",l4:"كفاءة مهنية في العمل",
+  contact:"تواصل معي",hello2:"أبحث عن وظيفة مطوّرة Backend مبتدئة (Junior) أو تدريب.",
+  email:"الإيميل",phone:"الهاتف",copy:"نسخ"
+};
+const EN={};
+document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(!(k in EN))EN[k]=el.innerHTML});
+const root=document.documentElement,toggle=document.getElementById("lang-toggle");
+function setLang(l){
+  const d=l==="ar"?AR:EN;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=d[el.dataset.i18n];if(v!=null)el.innerHTML=v});
+  root.lang=l;root.dir=l==="ar"?"rtl":"ltr";
+  toggle.textContent=l==="ar"?"English":"عربي";
+  document.title=l==="ar"?"إسراء منور | مطوّرة Backend":"Israa Munawwar | Backend Developer";
+  try{localStorage.setItem("lang",l)}catch(e){}
+}
+toggle.addEventListener("click",()=>setLang(root.lang==="ar"?"en":"ar"));
+let saved=null;try{saved=localStorage.getItem("lang")}catch(e){}
+if(saved==="ar"||(!saved&&new URLSearchParams(location.search).get("lang")==="ar"))setLang("ar");
+
+// modal
+const modal=document.getElementById("edu-modal");
+document.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{modal.showModal();document.body.style.overflow="hidden"}));
+modal.addEventListener("close",()=>{document.body.style.overflow=""});
+modal.querySelector("[data-close]").addEventListener("click",()=>modal.close());
+modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
+
+// progress bar + dock
+const bar=document.getElementById("bar"),dock=document.getElementById("dock");
+function onScroll(){
+  const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.transform="scaleX("+(h>0?scrollY/h:0)+")";
+  dock.classList.toggle("hide",scrollY<innerHeight*.6);
+}
+addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+// count-up
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(!reduce&&"IntersectionObserver" in window){
   const io=new IntersectionObserver(es=>es.forEach(e=>{
     if(!e.isIntersecting)return;io.unobserve(e.target);
-    const el=e.target,end=+el.dataset.count;let t0=null;
-    const step=t=>{t0??=t;const p=Math.min((t-t0)/900,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+    const el=e.target,end=+el.dataset.count,suf=el.dataset.suffix||"";let t0=null;
+    const step=t=>{t0??=t;const p=Math.min((t-t0)/1000,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(step)};
     requestAnimationFrame(step);
   }),{threshold:.6});
   document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
 }
-// copy buttons
+
+// copy
 document.querySelectorAll(".copy").forEach(btn=>btn.addEventListener("click",()=>{
-  const el=document.getElementById(btn.dataset.copy),text=el.textContent;
-  const done=()=>{btn.textContent="Copied ✓";setTimeout(()=>btn.textContent="Copy",1600)};
-  const fallback=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Selected";setTimeout(()=>btn.textContent="Copy",1600)};
+  const el=document.getElementById(btn.dataset.copy),text=el.textContent,ar=root.lang==="ar";
+  const reset=()=>setTimeout(()=>btn.textContent=ar?"نسخ":"Copy",1600);
+  const done=()=>{btn.textContent=ar?"تم النسخ ✓":"Copied ✓";reset()};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);reset()};
   try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
 }));
 </script>
-
 </body>
 </html>
