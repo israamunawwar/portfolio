@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Israa Munawwar | Backend Developer</title>
+<meta name="description" content="Backend developer specializing in Laravel, RESTful APIs and relational databases, with hands-on Flutter experience for mobile clients.">
+<meta property="og:title" content="Israa Munawwar | Backend Developer">
+<meta property="og:description" content="Backend developer specializing in Laravel, RESTful APIs and relational databases.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%236C4BF4'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='800' font-size='13' fill='white' text-anchor='middle'%3EIM%3C/text%3E%3C/svg%3E">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: friendly backend portfolio. Hero = name + animated request-flow diagram (clients -> Laravel API -> MySQL). Content taken from the CV word for word. */
+:root{
+  --bg:#F7F6FB; --surface:#FFFFFF; --ink:#221B3A; --muted:#655E80; --line:#E6E2F1;
+  --accent:#6C4BF4; --soft:#EFEAFF; --coral:#F0643F; --coral-soft:#FFEBE4; --mint:#139C78; --mint-soft:#DDF5EC;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#13101F; --surface:#1C1830; --ink:#EEEAFB; --muted:#A39CC0; --line:#2D2747;
+  --accent:#A08BFF; --soft:#2A2350; --coral:#FF9479; --coral-soft:#3A2420; --mint:#4FD6AE; --mint-soft:#13332B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13101F; --surface:#1C1830; --ink:#EEEAFB; --muted:#A39CC0; --line:#2D2747;
+  --accent:#A08BFF; --soft:#2A2350; --coral:#FF9479; --coral-soft:#3A2420; --mint:#4FD6AE; --mint-soft:#13332B; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+.mono-mark{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--accent);color:var(--bg);font-family:var(--display);font-weight:800;font-size:16px;transition:transform .4s cubic-bezier(.3,1.6,.5,1)}
+.brand:hover .mono-mark{transform:rotate(-10deg) scale(1.08)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;padding:7px 12px;border-radius:999px;transition:background .2s,color .2s}
+.nav ul a:hover{background:var(--soft);color:var(--accent)}
+@media (max-width:720px){.nav ul{display:none}}
+
+/* hero */
+.hero{position:relative;padding-block:56px 72px}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+.blob.a{width:320px;height:320px;background:var(--accent);top:-40px;right:8%;opacity:.22}
+.blob.b{width:260px;height:260px;background:var(--coral);top:220px;left:-60px;opacity:.18;animation-delay:-6s}
+@keyframes drift{to{transform:translate(40px,30px) scale(1.12)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.hero-grid>*{min-width:0}
+.hello{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:var(--mint);background:var(--mint-soft);padding:7px 14px 7px 10px;border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--mint);animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--mint) 55%,transparent)}80%,100%{box-shadow:0 0 0 10px transparent}}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(46px,7.4vw,84px);line-height:.95;letter-spacing:-.035em;margin:20px 0 16px}
+h1 .wave{display:inline-block;transform-origin:70% 70%;animation:wave 2.6s ease-in-out 1s 2}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%,40%{transform:rotate(-8deg)}}
+.role{font-family:var(--mono);font-size:clamp(14px,1.8vw,17px);color:var(--accent);margin:0 0 18px;display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.role .caret{width:9px;height:1.2em;background:var(--accent);margin-left:4px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.summary{color:var(--muted);font-size:17px;max-width:36em;margin:0 0 28px}
+.summary b{color:var(--ink);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 14.5px/1 var(--body);padding:13px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;cursor:pointer;transition:transform .25s cubic-bezier(.3,1.6,.5,1),border-color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 24px -14px var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn svg{width:16px;height:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:24px;font-size:14px;color:var(--muted)}
+
+/* flow diagram */
+.flow{background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:18px 16px 12px;box-shadow:0 30px 60px -40px color-mix(in srgb,var(--accent) 70%,transparent);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.flow-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted);padding:0 6px 8px}
+.flow-head .live{color:var(--mint);display:flex;align-items:center;gap:6px}
+.flow svg{width:100%;height:auto;display:block}
+.node rect{fill:var(--bg);stroke:var(--line);stroke-width:1.5}
+.node.api rect{fill:var(--soft);stroke:var(--accent)}
+.node.db rect{fill:var(--mint-soft);stroke:var(--mint)}
+.node text{fill:var(--ink);font-family:var(--body);font-weight:700;font-size:14px}
+.node .sub{fill:var(--muted);font-family:var(--mono);font-weight:400;font-size:10.5px}
+.wire{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:5 6;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-22}}
+.pkt{fill:var(--accent)}.pkt.back{fill:var(--coral)}.pkt.db{fill:var(--mint)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--muted);padding:6px 6px 2px}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:8px;height:8px;border-radius:50%}
+
+/* ticker */
+.ticker{border-block:1.5px solid var(--line);overflow:hidden;padding-block:16px;background:var(--surface)}
+.track{display:flex;gap:40px;width:max-content;animation:scroll 40s linear infinite;font-family:var(--display);font-weight:600;font-size:22px;color:var(--muted)}
+.track span{display:flex;align-items:center;gap:40px;white-space:nowrap}
+.track span::after{content:"✦";color:var(--coral);font-size:14px}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding-block:88px 24px}
+.label{display:inline-block;font-family:var(--mono);font-size:13px;color:var(--coral);background:var(--coral-soft);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(32px,4.6vw,50px);letter-spacing:-.03em;line-height:1.05;margin:0 0 36px}
+
+/* reveal: visible by default, animated only where scroll timelines exist */
+@supports (animation-timeline:view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+  @keyframes rise{from{opacity:.15;transform:translateY(40px) scale(.98)}to{opacity:1;transform:none}}
+}
+
+/* Edu Bridge */
+.edu{position:relative;background:var(--surface);border:1.5px solid var(--line);border-radius:28px;padding:36px;overflow:hidden}
+.edu::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--soft);right:-120px;top:-160px;z-index:0}
+.edu>*{position:relative;z-index:1}
+.edu-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.edu-top>div{min-width:0}
+.edu h3{font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,44px);letter-spacing:-.025em;line-height:1;margin:0 0 6px}
+.edu .subtitle{font-size:17px;color:var(--muted);margin:0 0 14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--mint-soft);color:var(--mint)}
+.badge.v{background:var(--soft);color:var(--accent)}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:var(--bg);border:1.5px solid var(--line);border-radius:18px;padding:14px 18px;min-width:108px;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.stat:hover{transform:translateY(-4px) rotate(-2deg)}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:36px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;color:var(--muted)}
+.contrib{list-style:none;padding:0;margin:32px 0 28px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.contrib li{display:flex;gap:14px;align-items:flex-start;background:var(--bg);border:1.5px solid var(--line);border-radius:18px;padding:18px;min-width:0;transition:border-color .2s,transform .3s}
+.contrib li:hover{border-color:var(--accent);transform:translateY(-3px)}
+.contrib li:first-child{grid-column:1/-1}
+.ico{flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--soft);color:var(--accent)}
+.ico svg{width:22px;height:22px}
+.ico.c{background:var(--coral-soft);color:var(--coral)}.ico.m{background:var(--mint-soft);color:var(--mint)}
+.contrib li:hover .ico{animation:bop .5s}
+@keyframes bop{40%{transform:translateY(-5px) rotate(-8deg)}}
+.contrib p{margin:0;font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:10px 0 0}
+.chips li{font-family:var(--mono);font-size:12px;padding:4px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.edu-foot{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+.stackline{display:flex;flex-wrap:wrap;gap:6px}
+.stackline span{font-family:var(--mono);font-size:12.5px;padding:5px 11px;border-radius:8px;background:var(--soft);color:var(--accent)}
+@media (max-width:760px){.edu{padding:24px 18px;border-radius:22px}.contrib{grid-template-columns:1fr}}
+
+/* other projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.proj{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1.5px solid var(--line);border-radius:24px;padding:26px;min-width:0;transition:transform .35s cubic-bezier(.3,1.5,.5,1),border-color .2s,box-shadow .3s}
+.proj:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 22px 40px -28px var(--accent)}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.proj .ico{width:50px;height:50px;border-radius:15px}
+.proj:hover .ico{animation:bop .5s}
+.proj h3{font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.015em;line-height:1.15;margin:0}
+.proj p{margin:0;color:var(--muted);font-size:15.5px;flex:1}
+.gh{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;text-decoration:none;padding:7px 12px;border-radius:999px;background:var(--bg);border:1.5px solid var(--line);color:var(--ink);transition:border-color .2s}
+.gh:hover{border-color:var(--accent);color:var(--accent)}
+.gh svg{width:15px;height:15px}
+@media (max-width:760px){.projects{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill{background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:22px;min-width:0}
+.skill h4{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:19px;font-weight:800;margin:0 0 14px}
+.skill h4 .ico{width:36px;height:36px;border-radius:11px}
+.skill h4 .ico svg{width:18px;height:18px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.pills li{font-size:13.5px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);transition:transform .25s cubic-bezier(.3,1.8,.5,1),background .2s,color .2s}
+.pills li:hover{transform:translateY(-3px) rotate(-3deg);background:var(--accent);color:var(--bg);border-color:var(--accent)}
+@media (max-width:900px){.skills{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.skills{grid-template-columns:1fr}}
+
+/* education */
+.trio{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px}
+.card{background:var(--surface);border:1.5px solid var(--line);border-radius:22px;padding:24px;min-width:0}
+.card h4{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--coral);margin:0 0 14px;font-weight:500}
+.card p{margin:0}
+.card .sub{color:var(--muted);font-size:14px}
+.card .gap{margin-top:12px}
+@media (max-width:820px){.trio{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding-bottom:80px}
+.contact-box{position:relative;background:var(--accent);color:var(--bg);border-radius:32px;padding:48px 40px;overflow:hidden}
+.contact-box::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:var(--coral);opacity:.35;filter:blur(40px);right:-80px;bottom:-120px;animation:drift 10s ease-in-out infinite alternate}
+.contact-box>*{position:relative;z-index:1}
+.contact-box h2{margin:0 0 10px;color:var(--bg)}
+.contact-box>p{margin:0 0 30px;font-size:18px;opacity:.9}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cl{display:flex;align-items:center;gap:12px;padding:16px;border-radius:18px;background:var(--surface);color:var(--ink);text-decoration:none;min-width:0;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+a.cl:hover{transform:translateY(-4px) rotate(-1deg)}
+.cl>div{min-width:0;flex:1}
+.cl small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.cl .v{display:block;font-size:14.5px;font-weight:600;overflow-wrap:anywhere}
+.cl .ico{width:40px;height:40px}
+.copy{flex:none;font:600 12px var(--body);padding:7px 11px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.copy:hover{border-color:var(--accent)}
+@media (max-width:900px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.cgrid{grid-template-columns:1fr}.contact-box{padding:32px 20px;border-radius:24px}}
+footer{padding-block:24px 36px;font-size:13.5px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding-block:32px 56px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.pkt{display:none}}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M12 15v2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8-1.7-1.3a4 4 0 0 0-5-5z"/><path d="M3 21l6-6"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.5.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 3V21H9z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.2 15c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 9-8.1c.4-.3-.1-.5-.6-.2L6.4 13 1.6 11.5c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.4 1.5z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-call" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono-mark">IM</span>Israa Munawwar</a>
+    <nav><ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="blob a"></div><div class="blob b"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hello"><span class="dot"></span>Seeking a junior backend developer or internship role</span>
+        <h1>Hi, I'm Israa <span class="wave">👋</span></h1>
+        <p class="role"><span id="typed">Backend Developer | Laravel &amp; REST APIs</span><span class="caret"></span></p>
+        <p class="summary">Backend developer specializing in <b>Laravel, RESTful APIs and relational databases</b>, with hands-on Flutter experience for mobile clients. Second-largest contributor to a 6-role university management platform, where I built the <b>real-time chat module</b>, hardened <b>API security</b> (IDOR, XSS, rate limiting) and delivered the <b>student module end to end</b>.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">My projects ↓</a>
+          <a class="btn" href="Israa_Munawwar_CV.pdf" download>Download CV</a>
+          <a class="btn" href="https://github.com/israamunawwar" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/israa-munawwar" target="_blank" rel="noopener"><svg><use href="#i-in"/></svg>LinkedIn</a>
+          <a class="btn" href="https://wa.me/963954652404" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+          <a class="btn" href="https://t.me/+963954652404" target="_blank" rel="noopener"><svg><use href="#i-tg"/></svg>Telegram</a>
+        </div>
+        <div class="meta"><span>📍 Damascus, Syria</span><span>🗣 Arabic · English</span></div>
+      </div>
+
+      <div class="flow" aria-label="Diagram: Flutter app and web dashboard send requests to a Laravel REST API that reads and writes MySQL">
+        <div class="flow-head"><span>edu-bridge / architecture</span><span class="live"><span class="dot"></span>live</span></div>
+        <svg viewBox="0 0 520 330">
+          <path id="w1" class="wire" d="M150 70 C 190 70, 185 135, 215 135"/>
+          <path id="w2" class="wire" d="M150 260 C 190 260, 185 195, 215 195"/>
+          <path id="w3" class="wire" d="M375 165 L 405 165"/>
+          <path id="w1b" d="M215 145 C 185 145, 190 80, 150 80" fill="none"/>
+          <path id="w2b" d="M215 185 C 185 185, 190 250, 150 250" fill="none"/>
+
+          <g class="node"><rect x="10" y="40" width="140" height="60" rx="14"/><text x="30" y="66">Flutter App</text><text class="sub" x="30" y="85">Provider · Dio</text></g>
+          <g class="node"><rect x="10" y="230" width="140" height="60" rx="14"/><text x="30" y="256">Web Dashboard</text><text class="sub" x="30" y="275">6 user roles</text></g>
+          <g class="node api"><rect x="215" y="95" width="160" height="140" rx="18"/>
+            <text x="235" y="128">Laravel REST API</text>
+            <text class="sub" x="235" y="155">→ Sanctum auth</text>
+            <text class="sub" x="235" y="175">→ Queues</text>
+            <text class="sub" x="235" y="195">→ Pusher realtime</text>
+            <text class="sub" x="235" y="215">→ Rate limiting</text></g>
+          <g class="node db"><rect x="405" y="130" width="105" height="70" rx="14"/><text x="425" y="160">MySQL</text><text class="sub" x="425" y="180">indexed</text></g>
+
+          <circle class="pkt" r="5"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#w1"/></animateMotion></circle>
+          <circle class="pkt" r="5"><animateMotion dur="2.6s" begin="0.7s" repeatCount="indefinite"><mpath href="#w2"/></animateMotion></circle>
+          <circle class="pkt back" r="5"><animateMotion dur="2.4s" begin="1.1s" repeatCount="indefinite"><mpath href="#w1b"/></animateMotion></circle>
+          <circle class="pkt back" r="5"><animateMotion dur="2.8s" begin="0.3s" repeatCount="indefinite"><mpath href="#w2b"/></animateMotion></circle>
+          <circle class="pkt db" r="5"><animateMotion dur="1.1s" repeatCount="indefinite"><mpath href="#w3"/></animateMotion></circle>
+        </svg>
+        <div class="legend"><span><i style="background:var(--accent)"></i>request</span><span><i style="background:var(--coral)"></i>real-time event</span><span><i style="background:var(--mint)"></i>query</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span>PHP</span><span>Laravel</span><span>RESTful APIs</span><span>Sanctum</span><span>Queues</span><span>Pusher</span><span>MySQL</span><span>SQL Server</span><span>Oracle</span><span>Flutter</span><span>C#</span><span>ASP.NET Core</span><span>Python</span><span>Git</span><span>Postman</span><span>Linux</span>
+      <span>PHP</span><span>Laravel</span><span>RESTful APIs</span><span>Sanctum</span><span>Queues</span><span>Pusher</span><span>MySQL</span><span>SQL Server</span><span>Oracle</span><span>Flutter</span><span>C#</span><span>ASP.NET Core</span><span>Python</span><span>Git</span><span>Postman</span><span>Linux</span>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <span class="label">GET /projects</span>
+      <h2>Projects</h2>
+
+      <article class="edu reveal">
+        <div class="edu-top">
+          <div>
+            <h3>Edu Bridge</h3>
+            <p class="subtitle">University Management Platform (Graduation Project)</p>
+            <div class="badges">
+              <span class="badge"><span class="dot"></span>Live on the Damascus Intermediate Institute server</span>
+              <span class="badge v">Backend · Mobile App</span>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><b data-count="6">6</b><span>user roles</span></div>
+            <div class="stat"><b data-count="4">4</b><span>team members</span></div>
+            <div class="stat"><b data-count="9">9</b><span>focused controllers</span></div>
+          </div>
+        </div>
+
+        <ul class="contrib">
+          <li><span class="ico"><svg><use href="#i-users"/></svg></span><p>Web dashboard and Flutter app serving 6 user roles; built in a team of 4 as the second-largest contributor to both backend and mobile.</p></li>
+          <li><span class="ico c"><svg><use href="#i-chat"/></svg></span><div><p>Built one-to-one and group real-time chat for all roles on web and mobile using Pusher.</p></div></li>
+          <li><span class="ico m"><svg><use href="#i-shield"/></svg></span><div><p>Secured the API by fixing IDOR and XSS vulnerabilities and adding rate limiting, background queues, database indexing and a single-active-session policy.</p></div></li>
+          <li><span class="ico"><svg><use href="#i-user"/></svg></span><div><p>Delivered the student module end to end: Laravel APIs and Flutter screens for:</p><ul class="chips"><li>dashboard</li><li>attendance</li><li>schedule</li><li>assignments</li><li>notifications</li></ul></div></li>
+          <li><span class="ico c"><svg><use href="#i-layers"/></svg></span><div><p>Refactored a monolithic admin controller into 9 focused controllers with FormRequest validation; added ArcFace face verification, a Telegram bot and PDF/Excel reports.</p></div></li>
+        </ul>
+
+        <div class="edu-foot">
+          <div class="stackline"><span>Laravel 12</span><span>Sanctum</span><span>Pusher</span><span>MySQL</span><span>Flutter</span></div>
+          <div class="actions">
+            <a class="btn primary" href="https://edu-bradge.netlify.app" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>Project website</a>
+            <a class="btn" href="https://github.com/majdoulee2006/edu_bridge_backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Backend</a>
+            <a class="btn" href="https://github.com/majdoulee2006/Edu_Pridge_flutter" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>Mobile App</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="projects">
+        <article class="proj reveal">
+          <div class="proj-top"><span class="ico"><svg><use href="#i-lock"/></svg></span><a class="gh" href="https://github.com/israamunawwar/DrPassword_Backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
+          <h3>DrPasswords API</h3>
+          <p>REST API for a physical password manager (Flutter app + ESP32 device) with token authentication and encrypted credential storage synced between app and hardware.</p>
+          <div class="stackline"><span>Laravel</span><span>Sanctum</span></div>
+        </article>
+        <article class="proj reveal">
+          <div class="proj-top"><span class="ico m"><svg><use href="#i-box"/></svg></span><a class="gh" href="https://github.com/israamunawwar/WMS-Backend" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
+          <h3>Warehouse Management System</h3>
+          <p>Warehouse and lab-equipment system for an educational institute with roles and permissions, borrow requests, maintenance tracking and Excel/PDF reports.</p>
+          <div class="stackline"><span>Laravel</span><span>MySQL</span></div>
+        </article>
+        <article class="proj reveal">
+          <div class="proj-top"><span class="ico c"><svg><use href="#i-cart"/></svg></span><a class="gh" href="https://github.com/israamunawwar/folklore-platform" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
+          <h3>Palestinian Folklore E-Commerce Platform</h3>
+          <p>Authentication, order processing and a dynamic shopping cart, with an admin dashboard for real-time inventory monitoring.</p>
+          <div class="stackline"><span>Laravel</span><span>MySQL</span></div>
+        </article>
+        <article class="proj reveal">
+          <div class="proj-top"><span class="ico"><svg><use href="#i-desk"/></svg></span><a class="gh" href="https://github.com/israamunawwar/Warehouse-Automation-System" target="_blank" rel="noopener"><svg><use href="#i-gh"/></svg>GitHub</a></div>
+          <h3>Warehouse Automation System (Desktop)</h3>
+          <p>Desktop inventory application with location tracking, transaction reports and automatic low-stock alerts.</p>
+          <div class="stackline"><span>Python</span><span>Tkinter</span><span>SQL Server</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <span class="label">GET /skills</span>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-code"/></svg></span>Backend</h4><ul class="pills"><li>PHP</li><li>Laravel (Sanctum, Queues, Pusher)</li><li>RESTful API Design</li><li>C#</li><li>ASP.NET Core</li><li>Python</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-db"/></svg></span>Databases</h4><ul class="pills"><li>MySQL</li><li>SQL Server</li><li>Oracle</li><li>SQLite</li><li>ERD Design</li><li>Indexing</li><li>Query Optimization</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-shield"/></svg></span>Security</h4><ul class="pills"><li>Token Authentication</li><li>IDOR &amp; XSS Remediation</li><li>Rate Limiting</li><li>Session Management</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico"><svg><use href="#i-phone"/></svg></span>Mobile</h4><ul class="pills"><li>Flutter</li><li>Dart</li><li>Provider</li><li>Dio</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico m"><svg><use href="#i-tool"/></svg></span>Tools</h4><ul class="pills"><li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Postman</li><li>Linux</li><li>Figma</li></ul></div>
+        <div class="skill reveal"><h4><span class="ico c"><svg><use href="#i-net"/></svg></span>Foundations</h4><ul class="pills"><li>Systems Analysis &amp; Design</li><li>Networking Fundamentals (CCNA coursework)</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <span class="label">GET /education</span>
+      <h2>Education</h2>
+      <div class="trio">
+        <div class="card reveal">
+          <h4>Education</h4>
+          <p><strong>Technical Diploma in Computer Information Systems</strong></p>
+          <p class="sub">Damascus Training Centre (UNRWA), Damascus, Syria</p>
+          <p class="sub">2024 – 2026</p>
+        </div>
+        <div class="card reveal">
+          <h4>Courses</h4>
+          <p><strong>Frontend Web Development</strong></p><p class="sub">CodeCraft (Online)</p>
+          <p class="gap"><strong>Intermediate English</strong></p><p class="sub">UNRWA, Damascus</p>
+        </div>
+        <div class="card reveal">
+          <h4>Languages</h4>
+          <p><strong>Arabic</strong></p><p class="sub">Native</p>
+          <p class="gap"><strong>English</strong></p><p class="sub">Professional Working Proficiency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-box reveal">
+        <h2>Contact</h2>
+        <p>Seeking a junior backend developer or internship role.</p>
+        <div class="cgrid">
+          <a class="cl" href="https://wa.me/963954652404" target="_blank" rel="noopener"><span class="ico m"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><span class="v">+963 954 652 404</span></div></a>
+          <a class="cl" href="https://t.me/+963954652404" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-tg"/></svg></span><div><small>Telegram</small><span class="v">+963 954 652 404</span></div></a>
+          <div class="cl"><span class="ico c"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><span class="v" id="v-email">esraamnower@gmail.com</span></div><button class="copy" data-copy="v-email" id="copy-email">Copy</button></div>
+          <div class="cl"><span class="ico m"><svg><use href="#i-call"/></svg></span><div><small>Phone</small><span class="v" id="v-phone">+963 954 652 404</span></div><button class="copy" data-copy="v-phone" id="copy-phone">Copy</button></div>
+          <a class="cl" href="https://www.linkedin.com/in/israa-munawwar" target="_blank" rel="noopener"><span class="ico"><svg><use href="#i-in"/></svg></span><div><small>LinkedIn</small><span class="v">linkedin.com/in/israa-munawwar</span></div></a>
+          <a class="cl" href="https://github.com/israamunawwar" target="_blank" rel="noopener"><span class="ico c"><svg><use href="#i-gh"/></svg></span><div><small>GitHub</small><span class="v">github.com/israamunawwar</span></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Israa Munawwar</span><span>Damascus, Syria</span></div></footer>
+
+<script>
+// count-up on the Edu Bridge numbers (final values are already in the HTML)
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduce&&"IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;io.unobserve(e.target);
+    const el=e.target,end=+el.dataset.count;let t0=null;
+    const step=t=>{t0??=t;const p=Math.min((t-t0)/900,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};
+    requestAnimationFrame(step);
+  }),{threshold:.6});
+  document.querySelectorAll("[data-count]").forEach(el=>io.observe(el));
+}
+// copy buttons
+document.querySelectorAll(".copy").forEach(btn=>btn.addEventListener("click",()=>{
+  const el=document.getElementById(btn.dataset.copy),text=el.textContent;
+  const done=()=>{btn.textContent="Copied ✓";setTimeout(()=>btn.textContent="Copy",1600)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Selected";setTimeout(()=>btn.textContent="Copy",1600)};
+  try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
+}));
+</script>
+
+</body>
+</html>
